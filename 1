@@ -1,0 +1,54 @@
+# create snake water gun game
+import random
+list1 = ["s", "w", "g"]
+chance = 8
+no_chance=0
+computer_point=0
+your_point=0
+print("\t\t\tsnake water gun game\n\n")
+
+while (no_chance<chance):
+    random_ = random.choice(list1)
+    input_ = input("\t\tchose s for snake w for water g for gun\n")
+    if input_==random_:
+        print("tie")
+        print(f"your choise is {input_} and computer choise is {random_}")
+
+    elif input_=="s" and random_=="w":
+        print("you win")
+        print(f"your choise is {input_} and computer choise is {random_}")
+        your_point=your_point+1
+        print(f"your points are {your_point} and computer points are {computer_point}")
+    elif input_=="s" and random_=="g":
+        print("you lose")
+        print(f"your choise is {input_} and computer choise is {random_}")
+        computer_point=computer_point+1
+        print(f"your points are {your_point} and computer points are {computer_point}")
+    elif input_=="w" and random_=="s":
+        print("u lose")
+        print(f"your choise is {input_} and computer choise is {random_}")
+        computer_point=computer_point+1
+        print(f"your points are {your_point} and computer points are {computer_point}")
+    elif input_=="w" and random_=="g":
+        print("u win")
+        print(f"your choise is {input_} and computer choise is {random_}")
+        your_point=your_point+1
+        print(f"your points are {your_point} and computer points are {computer_point}")
+    elif input_=="g" and random_=="w":
+        print("u lose")
+        print(f"your choise is {input_} and computer choise is {random_}")
+        computer_point=computer_point+1
+        print(f"your points are {your_point} and computer points are {computer_point}")
+    elif input_=="g" and random_=="s":
+        print("u win")
+        print(f"your choise is {input_} and computer choise is {random_}")
+        your_point=your_point+1
+        print(f"your points are {your_point} and computer points are {computer_point}")
+    no_chance=no_chance+1
+
+if your_point>computer_point:
+    print(" you win")
+elif your_point<computer_point:
+    print("you lose")
+else:
+    print("\t\t\tmatch tie")
